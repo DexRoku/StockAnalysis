@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis</title>
+    <style>
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #a5b49b, #b2a48d); /* Earthy gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Main Container */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1); /* Slight white overlay for readability */
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column; /* Arrange elements vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* Input Field Styling */
+        input[type="text"] {
+            padding: 15px;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 25px;
+            border: none;
+            font-size: 18px;
+            background-color: #ffffff;
+            color: #333;
+            transition: transform 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Submit Button Styling */
+        input[type="submit"] {
+            padding: 15px;
+            width: 50%;
+            border-radius: 25px;
+            background-color: #8f9c7e; /* Muted greenish tone */
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a1b28b; /* Slightly lighter muted green */
+            transform: translateY(-5px); /* Slight upward hover effect */
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(2px); /* Button push effect on click */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Enter Stock Ticker Symbol</h1>
+        <form action="/stock" method="POST">
+            <input type="text" name="ticker" placeholder="Enter Ticker (e.g., AAPL, MSFT)" required>
+            <input type="submit" value="Get Stock Info">
+        </form>
+    </div>
+
+</body>
+</html>
